@@ -1,9 +1,10 @@
 <template>
   <Layout>
-    <h1>You nailed it
+    <h1>Hello
       <span class="primary-color">
-        !
+        teacher
       </span>
+      !
     </h1>
     <p>
       Thanks for submiting your response. Let's make our lessons simple for everyone!
@@ -19,7 +20,7 @@ h1{
 <script>
 export default {
   metaInfo: {
-    title: 'You nailed it!'
+    title: 'Teacher dashboard'
   }
 }
 </script>

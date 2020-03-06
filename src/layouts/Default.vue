@@ -33,12 +33,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  margin: 10px 0;
 }
 
 .brand{
-  width: 300px;
- margin: 0;
+  width: 150px;
+ margin: auto;
 }
 body{
   font-family: 'Roboto', sans-serif;

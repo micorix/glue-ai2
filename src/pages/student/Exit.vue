@@ -1,12 +1,14 @@
 <template>
   <Layout>
-    <h1>You nailed it
+    <h1>Glad we could help
       <span class="primary-color">
-        !
+        :)
       </span>
     </h1>
     <p>
-      Thanks for submiting your response. Let's make our lessons simple for everyone!
+      Just remember, you can ask us anytime you don't understand something.
+      <br />
+      See you next time!
     </p>
   </Layout>
 </template>
@@ -15,11 +17,12 @@
 h1{
   margin-top: 20vh;
 }
+
 </style>
 <script>
 export default {
   metaInfo: {
-    title: 'You nailed it!'
+    title: 'About us'
   }
 }
 </script>

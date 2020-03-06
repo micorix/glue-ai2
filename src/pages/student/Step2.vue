@@ -13,7 +13,10 @@
     <p>
       We can find you a buddy who will try to explain the lesson for you.
     </p>
-    <g-link to="/student/buddy" class="find-buddy">
+    <g-link to="/student/bot" class="find-buddy">
+      Ask our bot
+    </g-link>
+    <g-link to="/student/glue-buddy" class="find-buddy">
       Glue a buddy
     </g-link>
   </Layout>
@@ -38,11 +41,16 @@ header{
   margin-top: 1em;
   cursor: pointer;
 }
+.find-buddy:last-of-type{
+  margin-left: 20px;
+  background: #22AB00;
+  color: #eee;
+}
 </style>
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
+    title: 'Step 2'
   }
 }
 </script>
