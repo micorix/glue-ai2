@@ -20,6 +20,10 @@ h1{
 export default {
   metaInfo: {
     title: 'You nailed it!'
+  },
+  mounted(){
+    if (typeof window !== 'undefined')
+      this.$confetti.start();
   }
 }
 </script>
