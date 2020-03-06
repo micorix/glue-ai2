@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <header class="header">
-      <img src="/logo.png" alt="" class="brand">
+      <img src="/logo.png" alt="" class="brand" @click="this.redirect">
     </header>
     <slot/>
   </div>
@@ -14,7 +14,19 @@ query {
   }
 }
 </static-query>
-
+<script>
+export default {
+  methods: {
+    redirect(){
+      if(window.location.href.includes('teacher')){
+        window.location.href = '/teacher'
+      }else{
+        window.location.href = '/student'
+      }
+    }
+  }
+}
+</script>
 <style>
 body {
   margin:0;

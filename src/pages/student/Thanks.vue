@@ -22,8 +22,10 @@ export default {
     title: 'You nailed it!'
   },
   mounted(){
-    if (typeof window !== 'undefined')
-      this.$confetti.start();
-  }
+    setTimeout(() => {
+      if (typeof window !== 'undefined')
+        this.$confetti.start()
+      }, 1000)
+    }
 }
 </script>
