@@ -26,6 +26,12 @@ export default {
       if (process.isClient)
         this.$confetti.start()
       }, 1000)
-    }
+  },
+  beforeDestroy(){
+    setTimeout(() => {
+      if (process.isClient)
+        this.$confetti.stop()
+      }, 10)
+  }
 }
 </script>
