@@ -8,5 +8,6 @@ export default {
     title: 'Hello, world!'
   }
 }
-window.location.href = '/student'
+if (typeof window !== 'undefined')
+  window.location.href = '/student'
 </script>
