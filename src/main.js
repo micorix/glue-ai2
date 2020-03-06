@@ -3,12 +3,18 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 
-export default function (Vue, { router, head, isClient }) {
+export default async function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
 
   if(isClient){
     const VueConfetti = require('vue-confetti').default
     Vue.use(VueConfetti)
+    const VueApexCharts = await import('vue-apexcharts').then(m => m.default)
+    Vue.component('apexchart', VueApexCharts)
+  }else{
+    Vue.component('apexchart', {
+      render: () => null
+    })
   }
   
   Vue.component('Layout', DefaultLayout)

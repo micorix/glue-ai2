@@ -7,7 +7,7 @@
     </h1>
     <h4>Results for the {{subject}} lesson</h4>
     <div class="chart">
-      <Chart :options="options" :series="series"></Chart>
+      <apexchart :options="options" :series="series"></apexchart>
     
     </div>
 <g-link to="/teacher" class="btn">Go back</g-link>
@@ -60,12 +60,7 @@ export default {
     metaInfo: {
         title: 'Teacher\'s dashboard'
     },
-    components: {
-       Chart: () =>
-        import ('vue-apexcharts')
-        .then(m => m)
-        .catch()
-    },
+   
     data: () => ({
         subject: '',
         series: [getRndInteger(10, 20), getRndInteger(10, 20)],
