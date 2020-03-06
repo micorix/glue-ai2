@@ -2,13 +2,17 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
-import VueConfetti from 'vue-confetti'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
+
+  if(isClient){
+    const VueConfetti = require('vue-confetti').default
+
+    Vue.use(VueConfetti)
+  }
+
   Vue.component('Layout', DefaultLayout)
-  
-  Vue.use(VueConfetti)
 
   head.link.push({
     rel: 'stylesheet',

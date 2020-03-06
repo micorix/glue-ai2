@@ -23,7 +23,7 @@ export default {
   },
   mounted(){
     setTimeout(() => {
-      if (typeof window !== 'undefined')
+      if (process.isClient)
         this.$confetti.start()
       }, 1000)
     }
