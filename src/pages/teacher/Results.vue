@@ -7,7 +7,7 @@
     </h1>
     <h4>Results for the {{subject}} lesson</h4>
     <div class="chart">
-      <apexchart width="300" type="pie" :options="options" :series="series"></apexchart>
+      <Chart :options="options" :series="series"></Chart>
     
     </div>
 <g-link to="/teacher" class="btn">Go back</g-link>
@@ -60,17 +60,22 @@ export default {
     metaInfo: {
         title: 'Teacher\'s dashboard'
     },
+    components: {
+       Chart: () =>
+        import ('vue-apexcharts')
+        .then(m => m)
+        .catch()
+    },
     data: () => ({
         subject: '',
-        ...{
-          
-          series: [getRndInteger(10, 20), getRndInteger(10, 20)],
+        series: [getRndInteger(10, 20), getRndInteger(10, 20)],
           options: {
             chart: {
               width: 380,
               type: 'pie',
             },
             labels: ['I understand', 'I don\'t understand'],
+            colors: ['#badc58', '#22AB00'],
             responsive: [{
               breakpoint: 480,
               options: {
@@ -82,7 +87,6 @@ export default {
           },
           
           
-        },
     }),
     mounted(){
       if(process.isClient){
